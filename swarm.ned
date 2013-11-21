@@ -47,7 +47,7 @@ network swarm_network
             @display("p=310,25;is=s");
         }
         eNodeB: eNBpp {
-            @display("p=84,321;is=vl");
+            @display("is=vl");
         }
         ue[numUe]: Ue;
         router1: Router {
