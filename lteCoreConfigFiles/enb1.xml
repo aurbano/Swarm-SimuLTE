@@ -24,7 +24,7 @@
 	<!-- from destination address to tftIdentifier -->
 	<filterTable>
 		<filter
-			destName   = "InternetHost"
+			destName   = "Controller"
 			srcName    = "ue[0]"
 			tftId      = "11"     
 		/>

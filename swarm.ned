@@ -53,8 +53,8 @@ network swarm_network
         router1: Router {
             @display("p=183,501");
         }
-        InternetHost: StandardHost {
-            @display("p=735,144");
+        Controller: StandardHost {
+            @display("p=735,144;i=device/wifilaptop");
         }
         pgwStandard: PgwStandard {
             nodeType = "PGW";
@@ -71,7 +71,7 @@ network swarm_network
         }
     connections:
         router1.pppg++ <--> networkConnection <--> eNodeB.ppp;
-        InternetHost.ethg++ <--> networkConnection <--> router3.ethg++;
+        Controller.ethg++ <--> networkConnection <--> router3.ethg++;
 
         pgwStandard.pppg++ <--> networkConnection <--> router.pppg++;
         pgwStandard.filterGate <--> networkConnection <--> router3.pppg++;

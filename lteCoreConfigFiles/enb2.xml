@@ -29,7 +29,7 @@
 	<!-- from destination address to tftIdentifier -->
 	<filterTable>
 		<filter
-			destName   = "InternetHost"
+			destName   = "Controller"
 			srcName    = "UE2"
 			tftId      = "12"     
 		/>
