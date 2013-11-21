@@ -1,0 +1,3 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "eutran_epcNetwork" "eutran_epcNetwork" "2" "565x342+125+125:normal"
+
