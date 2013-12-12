@@ -25,7 +25,7 @@
 	<filterTable>
 		<filter
 			destName   = "Controller"
-			srcName    = "ue[0]"
+			srcName    = "ue[*]"
 			tftId      = "11"     
 		/>
 	</filterTable>
