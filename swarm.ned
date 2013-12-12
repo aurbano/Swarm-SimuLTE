@@ -28,6 +28,15 @@ network swarm_network
     types:
         channel networkConnection extends ThruputMeteringChannel
         {
+            @signal[channelBusy](type="int");
+            @signal[messageSent](type=cMessage);
+            @signal[messageDiscarded](type=cMessage);
+            @statistic[busy](source=channelBusy;record=vector?;interpolationmode=sample-hold);
+            @statistic[utilization](source="timeavg(channelBusy)";record=last?);
+            @statistic[packets](source="constant1(messageSent)";record=count?;interpolationmode=none);
+            @statistic[packetBytes](source="packetBytes(messageSent)";record=sum?;unit=B;interpolationmode=none);
+            @statistic[packetsDiscarded](source="constant1(messageDiscarded)";record=count?;interpolationmode=none);
+            @statistic[throughput](source="sumPerDuration(packetBits(messageSent))";record=last?;unit=bps);
             delay = 0.1us;
             datarate = 10Mbps;
             thruputDisplayFormat = "u";
