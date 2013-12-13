@@ -8,7 +8,7 @@
 		<teid 
 			teidIn  ="0"
 			teidOut ="-1"
-			nextHop ="0.0.0.0"
+			nextHop ="192.168.1.2"
 		/>
 	</teidTable>
 	
@@ -25,7 +25,12 @@
 	<filterTable>
 		<filter
 			destName   = "Controller"
-			srcName    = "ue[*]"
+			srcName    = "ue[0]"
+			tftId      = "11"     
+		/>
+		<filter
+			destName   = "Controller"
+			srcName    = "ue[1]"
 			tftId      = "11"     
 		/>
 	</filterTable>
