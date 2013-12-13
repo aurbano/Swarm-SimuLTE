@@ -58,7 +58,11 @@ network swarm_network
         eNodeB: eNBpp {
             @display("is=vl");
         }
-        ue[numUe]: Ue;
+        ue[numUe]: Ue{
+            parameters:
+                @signal[voIPJitter](type="double");
+       			@statistics[sample](title="voIP jitter";source="voIPJitter";record=all;interpolationmode=none);
+        }
         router1: Router {
             @display("p=183,501");
         }

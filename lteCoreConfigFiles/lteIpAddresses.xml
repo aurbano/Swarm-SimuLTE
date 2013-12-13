@@ -1,5 +1,5 @@
 <config>
-    <interface hosts="InternetHost" names="eth*" address="10.1.1.x" netmask=""/>
+    <interface hosts="Controller" names="eth*" address="10.1.1.x" netmask=""/>
     <interface hosts="ue[*]" address="10.1.1.x" netmask=""/>
 	<interface hosts="*" names="eth*" address="10.1.1.x" netmask="255.255.x.x"/>
 	
