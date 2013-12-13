@@ -28,5 +28,10 @@
 			srcName    = "ue[0]"
 			tftId      = "11"     
 		/>
+		<filter
+			destName   = "Controller"
+			srcName    = "ue[1]"
+			tftId      = "11"     
+		/>
 	</filterTable>
 </config>
