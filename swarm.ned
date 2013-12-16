@@ -31,12 +31,12 @@ network swarm_network
             @signal[channelBusy](type="int");
             @signal[messageSent](type=cMessage);
             @signal[messageDiscarded](type=cMessage);
-            @statistic[busy](source=channelBusy;record=vector?;interpolationmode=sample-hold);
-            @statistic[utilization](source="timeavg(channelBusy)";record=last?);
-            @statistic[packets](source="constant1(messageSent)";record=count?;interpolationmode=none);
-            @statistic[packetBytes](source="packetBytes(messageSent)";record=sum?;unit=B;interpolationmode=none);
-            @statistic[packetsDiscarded](source="constant1(messageDiscarded)";record=count?;interpolationmode=none);
-            @statistic[throughput](source="sumPerDuration(packetBits(messageSent))";record=last?;unit=bps);
+            @statistic[busy](source=channelBusy; record=vector?; interpolationmode=sample-hold);
+            @statistic[utilization](source="timeavg(channelBusy)"; record=last?);
+            @statistic[packets](source="constant1(messageSent)"; record=count?; interpolationmode=none);
+            @statistic[packetBytes](source="packetBytes(messageSent)"; record=sum?; unit=B; interpolationmode=none);
+            @statistic[packetsDiscarded](source="constant1(messageDiscarded)"; record=count?; interpolationmode=none);
+            @statistic[throughput](source="sumPerDuration(packetBits(messageSent))"; record=last?; unit=bps);
             delay = 0.1us;
             datarate = 10Mbps;
             thruputDisplayFormat = "u";
@@ -58,10 +58,11 @@ network swarm_network
         eNodeB: eNBpp {
             @display("is=vl");
         }
-        ue[numUe]: Ue{
+        ue[numUe]: Ue {
             parameters:
                 @signal[voIPJitter](type="double");
-       			@statistics[sample](title="voIP jitter";source="voIPJitter";record=all;interpolationmode=none);
+                @statistics[sample](title="voIP jitter"; source="voIPJitter"; record=all; interpolationmode=none);
+                @display("i=misc/robot;is=n");
         }
         router1: Router {
             @display("p=183,501");

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
   <inputs>
     <inputs name="/swarm/results/Swarm-Control-*.vec"/>
     <inputs name="/swarm/results/Swarm-Control-*.sca"/>
   </inputs>
-  <datasets/>
+  <datasets>
+    <datasets name="voIPFrameDelay:vector swarm_network.Controller.udpApp[0]">
+      <items xsi:type="scave:Add" filterPattern="module(swarm_network.Controller.udpApp[0]) AND name(voIPFrameDelay:vector)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="voIPFrameDelay:vector swarm_network.Controller.udpApp[0]"/>
+    </datasets>
+  </datasets>
   <chartSheets/>
 </scave:Analysis>
