@@ -24,7 +24,7 @@ network swarm_network
 {
     parameters:
         int numUe = default(1);
-        @display("i=block/network2;bgb=798,558;bgi=background/terrain");
+        @display("i=block/network2;bgb=1194,600;bgi=background/campus");
     types:
         channel networkConnection extends ThruputMeteringChannel
         {
@@ -56,7 +56,7 @@ network swarm_network
             @display("p=310,25;is=s");
         }
         eNodeB: eNBpp {
-            @display("is=vl");
+            @display("is=vl;p=518,346");
         }
         ue[numUe]: Ue {
             parameters:
@@ -65,23 +65,23 @@ network swarm_network
                 @display("i=misc/robot;is=n");
         }
         router1: Router {
-            @display("p=183,501");
+            @display("p=671,281");
         }
         Controller: StandardHost {
-            @display("p=735,144;i=device/wifilaptop");
+            @display("p=1010,303;i=device/wifilaptop");
         }
         pgwStandard: PgwStandard {
             nodeType = "PGW";
-            @display("p=542,291");
+            @display("p=914,444");
         }
         router: Router {
-            @display("p=442,501");
+            @display("p=831,240");
         }
         router3: Router {
-            @display("p=735,291");
+            @display("p=1117,271");
         }
         sgwStandard1: SgwStandard {
-            @display("p=300,291");
+            @display("p=711,415");
         }
     connections:
         router1.pppg++ <--> networkConnection <--> eNodeB.ppp;
