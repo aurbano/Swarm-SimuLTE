@@ -1,2 +1,3 @@
 # Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "swarm_network" "swarm_network" "2" "565x342+125+125:normal"
 
