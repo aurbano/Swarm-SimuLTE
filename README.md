@@ -19,3 +19,5 @@ After running the simulations several graphs can be plotted with the data, below
  - Nicolas Lozano Arguëlles
  - Pablo Álvarez González
  - Pedro López Mareque
+
+[![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/swarm-simulte/readme)](https://github.com/aurbano)
